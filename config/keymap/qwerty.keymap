@@ -331,21 +331,6 @@
             bindings = <&kp LS(LALT)>;
             key-positions = <39 38>;
         };
-
-        combo_left_click_two {
-            bindings = <&mkp LCLK>;
-            key-positions = <31 32>;
-        };
-
-        combo_middle_click_two {
-            bindings = <&mkp MCLK>;
-            key-positions = <33 34>;
-        };
-
-        combo_right_click_two {
-            bindings = <&mkp RCLK>;
-            key-positions = <32 33>;
-        };
     };
 
     keymap {
@@ -384,9 +369,9 @@
         SYM {
             display-name = "sybol";
             bindings = <
-&kp N1  &kp TAB    &kp Q  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE        &kp GRAVE       &kp TILDE      &none          &none  &none  &kp BACKSPACE
-&kp N2  &kp LCTRL  &kp A  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp COLON       &kp MINUS       &kp EQUAL      &kp SLASH      &none  &none  &none
-&kp N3  &kp LSHFT  &kp Y  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp QUESTION    &kp UNDERSCORE  &kp AMPERSAND  &kp BACKSLASH  &none  &none  &none
+&kp N1  &kp TAB    &kp Q  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE        &kp GRAVE       &kp TILDE      &none      &none  &none  &kp BACKSPACE
+&kp N2  &kp LCTRL  &kp A  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp COLON       &kp MINUS       &kp EQUAL      &kp SLASH  &none  &none  &none
+&kp N3  &kp LSHFT  &kp Y  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp QUESTION    &kp UNDERSCORE  &kp AMPERSAND  &none      &none  &none  &none
                           &trans                &trans                 &trans          &trans          &trans
             >;
         };
@@ -404,10 +389,10 @@
         GAME {
             display-name = "Game";
             bindings = <
-&kp NUMBER_4  &kp ESCAPE    &kp Q  &kp W  &kp E  &kp R        &to 0  &none  &none  &none  &none  &trans
-&kp NUMBER_3  &kp LSHFT     &kp A  &kp S  &kp D  &kp F        &none  &none  &none  &none  &none  &none
-&kp NUMBER_2  &kp NUMBER_1  &kp Z  &kp X  &kp C  &kp V        &none  &none  &none  &none  &none  &none
-                                   &kp G  &kp M  &kp SPACE    &none  &none
+&kp N1  &kp ESCAPE        &kp Q  &kp W  &kp E  &kp R        &to 0  &none  &none  &none  &none  &trans
+&kp N2  &kp LSHFT         &kp A  &kp S  &kp D  &kp F        &none  &none  &none  &none  &none  &none
+&kp N3  &kp LEFT_CONTROL  &kp Z  &kp X  &kp C  &kp V        &none  &none  &none  &none  &none  &none
+                                 &kp G  &kp M  &kp SPACE    &none  &none
             >;
         };
 
