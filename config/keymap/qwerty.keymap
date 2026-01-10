@@ -332,19 +332,19 @@
             key-positions = <39 38>;
         };
 
-        combo_left_click {
+        combo_left_click_two {
             bindings = <&mkp LCLK>;
             key-positions = <31 32>;
         };
 
-        combo_middle_click {
-            bindings = <&mkp MCLK>;
-            key-positions = <33 32>;
-        };
-
-        combo_middle_click {
+        combo_middle_click_two {
             bindings = <&mkp MCLK>;
             key-positions = <33 34>;
+        };
+
+        combo_right_click_two {
+            bindings = <&mkp RCLK>;
+            key-positions = <32 33>;
         };
     };
 
