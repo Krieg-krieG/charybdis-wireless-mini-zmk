@@ -365,7 +365,7 @@ combos:
   k: Sft+ LALT
 - p: [31, 32]
   k: L CLK
-- p: [33, 32]
-  k: Mid CLK
 - p: [33, 34]
   k: Mid CLK
+- p: [32, 33]
+  k: R CLK
