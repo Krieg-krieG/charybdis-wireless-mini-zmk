@@ -159,7 +159,7 @@ layers:
   - '?'
   - _
   - '&'
-  - ''
+  - \
   - ''
   - ''
   - ''
@@ -211,7 +211,7 @@ layers:
   - ''
   - ''
   Game:
-  - '1'
+  - '4'
   - ESCAPE
   - Q
   - W
@@ -223,7 +223,7 @@ layers:
   - ''
   - ''
   - {t: ▽, type: trans}
-  - '2'
+  - '3'
   - LSHFT
   - A
   - S
@@ -235,8 +235,8 @@ layers:
   - ''
   - ''
   - ''
-  - '3'
-  - LEFT CONTROL
+  - '2'
+  - '1'
   - Z
   - X
   - C
@@ -363,3 +363,9 @@ combos:
   k: LEFT ALT
 - p: [39, 38]
   k: Sft+ LALT
+- p: [31, 32]
+  k: L CLK
+- p: [33, 34]
+  k: Mid CLK
+- p: [32, 33]
+  k: R CLK
