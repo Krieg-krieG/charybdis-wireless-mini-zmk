@@ -343,7 +343,7 @@
         };
 
         layer3 {
-            bindings = <&lt 3 LCTRL>;
+            bindings = <&kp LCTRL>;
             key-positions = <40 37>;
         };
     };
@@ -354,10 +354,10 @@
         BASE {
             display-name = "Base";
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E         &kp R         &kp T                   &kp Y              &kp U     &kp I      &kp O       &kp P          &kp LEFT_ALT
-&kp LCTRL  &kp A  &kp S  &kp D         &kp F         &kp G                   &kp H              &lt 7 J   &kp K      &kp L       &kp SEMICOLON  &kp SQT
-&to 5      &kp Z  &kp X  &kp C         &kp V         &kp B                   &kp N              &lt 7 M   &kp COMMA  &kp PERIOD  &kp SLASH      &sl 4
-                         &kp LEFT_WIN  &lt 1 ESCAPE  &mt LEFT_SHIFT SPACE    &lt (3) LA(SPACE)  &kp BSPC
+&kp TAB    &kp Q  &kp W  &kp E         &kp R         &kp T                   &kp Y         &kp U     &kp I      &kp O       &kp P          &kp LEFT_ALT
+&kp LCTRL  &kp A  &kp S  &kp D         &kp F         &kp G                   &kp H         &lt 7 J   &kp K      &kp L       &kp SEMICOLON  &kp SQT
+&to 5      &kp Z  &kp X  &kp C         &kp V         &kp B                   &kp N         &lt 7 M   &kp COMMA  &kp PERIOD  &kp SLASH      &sl 4
+                         &kp LEFT_WIN  &lt 1 ESCAPE  &mt LEFT_SHIFT SPACE    &lt 3 DELETE  &kp BSPC
             >;
         };
 
