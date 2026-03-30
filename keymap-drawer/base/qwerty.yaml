@@ -40,7 +40,7 @@ layers:
   - LEFT WIN
   - {t: ESCAPE, h: Num}
   - {t: SPACE, h: LEFT SHIFT}
-  - {t: ENTER, h: sybol}
+  - {t: DELETE, h: sybol}
   - BSPC
   Num:
   - TAB
@@ -351,8 +351,6 @@ combos:
 - p: [17, 18]
   k: CAPS WORD
   l: [Base]
-- p: [38, 39]
-  k: L_BASE L_EXTRA
 - p: [28, 27]
   k: L CLK
 - p: [26, 25]
@@ -362,10 +360,12 @@ combos:
 - p: [19, 20]
   k: LEFT ALT
 - p: [39, 38]
-  k: Sft+ LALT
+  k: KP ENTER
 - p: [31, 32]
   k: L CLK
 - p: [33, 34]
   k: Mid CLK
 - p: [32, 33]
   k: R CLK
+- p: [40, 37]
+  k: LCTRL
