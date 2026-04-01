@@ -175,7 +175,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <150>;
-            bindings = <&lt 5 ESC>, <&mo 4>;
+            bindings = <&lt 5 ESC>, <&mo 3>;
 
             // hold, tap, double_tap
         };
@@ -245,7 +245,7 @@
         td_layers: td_layer_swap {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings = <&to 0>, <&to 3>;
+            bindings = <&to 0>, <&to 4>;
 
             // tap, double_tap
         };
@@ -339,9 +339,9 @@
             key-positions = <32 33>;
         };
 
-        layer3 {
-            bindings = <&kp LCTRL>;
-            key-positions = <40 37>;
+        back_to_base_layer {
+            bindings = <&to 0>;
+            key-positions = <10 11>;
         };
     };
 
@@ -351,19 +351,19 @@
         BASE {
             display-name = "Base";
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E         &kp R         &kp T                   &kp Y         &kp U     &kp I      &kp O       &kp P          &kp LEFT_ALT
-&kp LCTRL  &kp A  &kp S  &kp D         &kp F         &kp G                   &kp H         &lt 7 J   &kp K      &kp L       &kp SEMICOLON  &kp SQT
-&to 5      &kp Z  &kp X  &kp C         &kp V         &kp B                   &kp N         &lt 7 M   &kp COMMA  &kp PERIOD  &kp SLASH      &sl 4
-                         &kp LEFT_WIN  &lt 1 ESCAPE  &mt LEFT_SHIFT SPACE    &lt 3 DELETE  &kp BSPC
+&kp TAB    &kp Q  &kp W  &kp E         &kp R         &kp T                   &kp Y        &kp U     &kp I      &kp O       &kp P          &kp LCTRL
+&kp LCTRL  &kp A  &kp S  &kp D         &kp F         &kp G                   &kp H        &lt 7 J   &kp K      &kp L       &kp SEMICOLON  &kp SQT
+&none      &kp Z  &kp X  &kp C         &kp V         &kp B                   &kp N        &lt 7 M   &kp COMMA  &kp PERIOD  &kp SLASH      &sl 3
+                         &kp LEFT_WIN  &lt 1 ESCAPE  &mt LEFT_SHIFT SPACE    &lt 4 ENTER  &kp BSPC
             >;
         };
 
         NUM {
             display-name = "Num";
             bindings = <
-&kp TAB    &kp NUMBER_1         &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5         &kp NUMBER_6    &kp N7          &kp N8        &kp N9                &kp N0                 &none
+&kp TAB    &kp NUMBER_1         &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5         &kp NUMBER_6    &kp N7          &kp N8        &kp N9                &kp N0                 &trans
 &kp LCTRL  &kp LS(EXCLAMATION)  &kp AT_SIGN   &kp HASH      &kp DOLLAR    &kp PERCENT    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW       &none                  &none
-&none      &none                &none         &none         &none         &none          &kp LCTRL       &kp AMPERSAND   &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none
+&none      &kp F11              &kp F12       &kp F8        &kp F4        &kp F5         &kp CARET       &kp AMPERSAND   &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none
                                               &trans        &trans        &trans         &kp LEFT_SHIFT  &kp DELETE
             >;
         };
@@ -378,16 +378,6 @@
             >;
         };
 
-        SYM {
-            display-name = "sybol";
-            bindings = <
-&kp N1  &kp TAB    &kp Q  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE        &kp GRAVE       &kp TILDE      &none          &none  &none  &kp BACKSPACE
-&kp N2  &kp LCTRL  &kp A  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp COLON       &kp MINUS       &kp EQUAL      &kp SLASH      &none  &none  &none
-&kp N3  &kp LSHFT  &kp Y  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp QUESTION    &kp UNDERSCORE  &kp AMPERSAND  &kp BACKSLASH  &none  &none  &none
-                          &trans                &trans                 &trans          &trans          &trans
-            >;
-        };
-
         EXTRAS {
             display-name = "Xtra";
             bindings = <
@@ -395,6 +385,16 @@
 &kp C_SLEEP      &none          &none         &none          &none           &kp C_BRIGHTNESS_DEC    &none         &kp C_PREVIOUS  &kp C_PLAY_PAUSE   &kp C_STOP       &kp C_NEXT       &none
 &kp C_AL_COFFEE  &kp C_AC_UNDO  &kp C_AC_CUT  &kp C_AC_COPY  &kp C_AC_PASTE  &none                   &none         &kp K_MUTE      &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp PRINTSCREEN  &none
                                               &none          &none           &none                   &none         &none
+            >;
+        };
+
+        SYM {
+            display-name = "sybol";
+            bindings = <
+&none  &kp TAB    &none  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp TILDE    &kp GRAVE       &kp SQT        &kp DOUBLE_QUOTES  &none                 &none  &kp BACKSPACE
+&to 5  &kp LCTRL  &none  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE     &kp MINUS       &kp PLUS       &kp EQUAL          &kp NON_US_BACKSLASH  &none  &none
+&none  &kp LSHFT  &none  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp AMPS     &kp UNDERSCORE  &kp LESS_THAN  &kp GREATER_THAN   &kp SLASH             &none  &none
+                         &trans                &trans                 &trans       &trans          &trans
             >;
         };
 
