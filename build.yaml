@@ -14,20 +14,7 @@ include:
       - charybdis_right_bt
     keymap:
       - qwerty
-      - colemak_dh
-      - canary
 
-# ── Standard Dongle Firmwares ─────────────────────────────────────────────────
-  - name: standard_dongle
-    board: nice_nano//zmk
-    shield:
-      - charybdis_left_dongle
-      - charybdis_right_dongle
-      - charybdis_dongle
-    keymap:
-      - qwerty
-      - colemak_dh
-      - canary
 
 # ── NiceNano Prospector Dongle with Touch (Waveshare 887) Screen Firmwares (not yet implemented) ────────────────────────
 # # Touch screen variant
