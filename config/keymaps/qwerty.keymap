@@ -338,6 +338,16 @@
             bindings = <&to 0>;
             key-positions = <10 11>;
         };
+
+        bootloader-left {
+            bindings = <&bootloader>;
+            key-positions = <0 24>;
+        };
+
+        bootloader-right {
+            bindings = <&bootloader>;
+            key-positions = <11 35>;
+        };
     };
 
     keymap {
