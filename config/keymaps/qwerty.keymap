@@ -233,7 +233,8 @@
             #binding-cells = <0>;
             tapping-term-ms = <150>;
             bindings = <&lt 7 ESC>, <&mo 6>;
- // hold, tap, double_tap
+
+            // hold, tap, double_tap
         };
 
         lt_nav: nav_layer_tap {
@@ -249,7 +250,8 @@
             #binding-cells = <0>;
             tapping-term-ms = <110>;
             bindings = <&lt_nav 2 SPACE>, <&kp SPACE>;
- // hold, tap, double_tap
+
+            // hold, tap, double_tap
         };
 
         mo_clk: mo_click {
@@ -265,8 +267,9 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <170>;
-            bindings = <&mo_clk 3 LCLK>, <&mkp LCLK>;
- // hold, tap, double_tap
+            bindings = <&mo_clk 3 LCLK>, <&hold_lclk>;
+
+            // hold, tap, double_tap
         };
 
         bs_num: bs_num {
@@ -277,7 +280,8 @@
             quick-tap-ms = <200>;
             require-prior-idle-ms = <150>;
             bindings = <&mo>, <&kp>;
- // hold = layer, tap = keycode
+
+            // hold = layer, tap = keycode
         };
 
         httl: ht_two_layers {
@@ -293,7 +297,8 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             bindings = <&to 0>, <&to 4>;
- // tap, double_tap
+
+            // tap, double_tap
         };
 
         td_clk_scrl: td_click_or_scroll {
@@ -301,7 +306,8 @@
             #binding-cells = <0>;
             tapping-term-ms = <250>;
             bindings = <&mkp RCLK>, <&mo 8>;
-  // tap/hold, double_tap
+
+            // tap/hold, double_tap
         };
 
         td_bore: BASE_or_EXTRA {
@@ -683,6 +689,19 @@
                 <&macro_release>,
                 <&kp LALT &kp LCTRL>;
         };
+
+        hold_lclk: hold_lclk {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&mkp LCLK>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&mkp LCLK>;
+
+            label = "HOLD_LCLK";
+        };
     };
 
     combos {
@@ -792,40 +811,40 @@
         BASE {
             display-name = "Base";
             bindings = <
-&kp C_AC_SEARCH  &kp Q               &kp W            &kp E              &kp R             &kp T                  &kp Y      &kp U              &kp I              &kp O                &kp P                        &td_layers
-&kp TAB          &ht_left_tp LCMD A  &ht_left LALT S  &ht_left LSHFT D   &ht_left LCTRL F  &kp G                  &kp H      &ht_right RCTRL J  &ht_right RSHFT K  &ht_right_tp LALT L  &ht_right_tp RCMD SEMICOLON  &kp DEL
-&clip_hist       &kp Z               &kp X            &kp C              &kp V             &kp B                  &kp N      &kp M              &mm_cm_sc          &mm_pr_col           &mm_qm_ex                    &kp FSLH
-                                                      &td_esc_scrl_slow  &td_clk           &bs_num 1 BACKSPACE    &kp ENTER  &td_space_nav
+&kp C_AC_SEARCH  &kp Q               &kp W            &kp E              &kp R             &kp T            &kp Y      &kp U                &kp I              &kp O                &kp P                        &td_layers
+&kp TAB          &ht_left_tp LCMD A  &ht_left LALT S  &ht_left LSHFT D   &ht_left LCTRL F  &kp G            &kp H      &ht_right RCTRL J    &ht_right RSHFT K  &ht_right_tp LALT L  &ht_right_tp RCMD SEMICOLON  &kp DEL
+&clip_hist       &kp Z               &kp X            &kp C              &kp V             &kp B            &kp N      &kp M                &kp COMMA          &kp PERIOD           &kp SLASH                    &none
+                                                      &td_esc_scrl_slow  &td_clk           &td_space_nav    &kp ENTER  &bs_num 1 BACKSPACE
             >;
         };
 
         NUM {
             display-name = "Num";
             bindings = <
-&none   &none  &none  &none  &none          &none         &kp PLUS      &mm_f7     &mm_f8  &mm_f9  &mm_f10  &none
-&trans  &none  &none  &none  &kp BACKSPACE  &kp LSHIFT    &kp KP_MINUS  &mm_f4     &mm_f5  &mm_f6  &mm_f11  &none
-&none   &none  &kp X  &none  &none          &none         &kp EQUAL     &mm_f1     &mm_f2  &mm_f3  &mm_f12  &kp KP_SLASH
-                      &none  &none          &trans        &kp N0        &kp SPACE
+&none   &none  &none  &none  &kp DEL        &none         &kp PLUS      &mm_f7  &mm_f8  &mm_f9  &mm_f10  &none
+&trans  &none  &none  &none  &kp BACKSPACE  &kp LSHIFT    &kp KP_MINUS  &mm_f4  &mm_f5  &mm_f6  &mm_f11  &none
+&none   &none  &kp X  &none  &none          &none         &kp EQUAL     &mm_f1  &mm_f2  &mm_f3  &mm_f12  &kp KP_SLASH
+                      &none  &kp NUMBER_0   &kp SPACE     &none         &trans
             >;
         };
 
         NAV {
             display-name = "Nav";
             bindings = <
-&none    &msc MOVE_LEFT  &msc MOVE_UP    &none         &msc MOVE_DOWN   &msc MOVE_RIGHT    &detach_session  &create_or_attach  &next_pane  &show_sessions  &sync_panes      &none
-&kp TAB  &mkp MB4        &kp LALT        &kp LSHFT     &kp LCTRL        &mkp MB5           &h_split         &kp LEFT_ARROW     &kp DOWN    &kp UP          &kp RIGHT_ARROW  &none
-&none    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none              &v_split         &kp HOME           &kp PG_DN   &kp PG_UP       &kp END          &none
-                                         &none         &none            &none              &none            &trans
+&kp LG(TAB)  &msc MOVE_LEFT  &msc MOVE_UP    &none         &msc MOVE_DOWN   &msc MOVE_RIGHT    &create_or_attach  &next_pane      &show_sessions  &sync_panes      &detach_session  &none
+&kp TAB      &kp LCMD        &kp LALT        &kp LSHFT     &kp LCTRL        &mkp MB5           &kp LEFT_ARROW     &kp DOWN_ARROW  &kp UP_ARROW    &kp RIGHT_ARROW  &h_split         &none
+&none        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none              &kp HOME           &kp PAGE_DOWN   &kp PG_UP       &kp END          &v_split         &none
+                                             &none         &none            &trans             &none              &trans
             >;
         };
 
         SYM {
             display-name = "Sym";
             bindings = <
-&none  &kp TILDE  &kp DLLR  &kp CARET  &move_line_up    &mc_add_above    &kp AMPS   &kp PLUS      &kp LBKT  &kp RBKT  &kp PRCNT  &kp BSLH
-&none  &kp UNDER  &kp LT    &kp GT     &kp BACKSPACE    &delete_line     &kp GRAVE  &kp KP_MINUS  &kp LPAR  &kp RPAR  &kp ASTRK  &kp PIPE
-&none  &home_dir  &none     &kp HASH   &move_line_down  &mc_add_below    &code_blk  &kp EQUAL     &kp LBRC  &kp RBRC  &kp AT     &kp FSLH
-                            &none      &trans           &trans           &trans     &trans
+&none  &kp TILDE  &kp DLLR  &kp CARET  &move_line_up    &mc_add_above    &kp PLUS      &kp AMPERSAND  &kp LBKT  &kp RBKT  &kp PRCNT  &kp BSLH
+&none  &kp UNDER  &kp LT    &kp GT     &kp BACKSPACE    &delete_line     &kp KP_MINUS  &kp GRAVE      &kp LPAR  &kp RPAR  &kp ASTRK  &kp PIPE
+&none  &home_dir  &none     &kp HASH   &move_line_down  &mc_add_below    &kp EQUAL     &code_blk      &kp LBRC  &kp RBRC  &kp AT     &kp FSLH
+                            &none      &trans           &trans           &trans        &trans
             >;
         };
 
@@ -842,7 +861,7 @@
         EXTRAS {
             display-name = "Xtra";
             bindings = <
-&studio_unlock   &shrug         &lgtm         &gcm           &pbl PBL_INC    &kp C_BRIGHTNESS_INC    &out OUT_TOG  &bt BT_SEL 0    &bt BT_SEL 1       &bt BT_SEL 2     &bt BT_SEL 3     &none
+&studio_unlock   &shrug         &lgtm         &gcm           &pbl PBL_INC    &kp C_BRIGHTNESS_INC    &out OUT_TOG  &bt BT_SEL 0    &bt BT_SEL 1       &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_CLR
 &kp C_SLEEP      &sudo          &none         &pbl PBL_TOG   &pbl PBL_DEC    &kp C_BRIGHTNESS_DEC    &none         &kp C_PREVIOUS  &kp C_PLAY_PAUSE   &kp C_STOP       &kp C_NEXT       &none
 &kp C_AL_COFFEE  &kp C_AC_UNDO  &kp C_AC_CUT  &kp C_AC_COPY  &kp C_AC_PASTE  &none                   &new_dir      &kp K_MUTE      &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp PRINTSCREEN  &none
                                               &none          &none           &none                   &none         &none
