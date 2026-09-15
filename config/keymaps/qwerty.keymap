@@ -366,7 +366,7 @@
             bindings = <&kp AMPERSAND>, <&kp QUESTION>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
+            mods = <(MOD_LALT|MOD_RALT)>;
         };
     };
 
