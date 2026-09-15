@@ -267,7 +267,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <170>;
-            bindings = <&mo_clk 3 LCLK>, <&hold_lclk>;
+            bindings = <&kp LC(B)>, <&kp LC(B)>;
 
             // hold, tap, double_tap
         };
@@ -367,15 +367,6 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
-        };
-
-        mm_qwe_or_exc: mm_qwe_or_exc {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MM_QWE_OR_EXC";
-            bindings = <&mm_qwe>, <&none>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL)>;
         };
     };
 
@@ -818,7 +809,7 @@
             bindings = <
 &kp C_AC_SEARCH  &kp Q               &kp W            &kp E              &kp R             &kp T            &kp Y      &kp U                &kp I              &kp O                &kp P                        &td_layers
 &kp TAB          &ht_left_tp LCMD A  &ht_left LALT S  &ht_left LSHFT D   &ht_left LCTRL F  &kp G            &kp H      &ht_right RCTRL J    &ht_right RSHFT K  &ht_right_tp LALT L  &ht_right_tp RCMD SEMICOLON  &kp SQT
-&clip_hist       &kp Z               &kp X            &kp C              &kp V             &kp B            &kp N      &kp M                &kp COMMA          &kp PERIOD           &kp SLASH                    &mm_qwe_or_exc
+&clip_hist       &kp Z               &kp X            &kp C              &kp V             &kp B            &kp N      &kp M                &kp COMMA          &kp PERIOD           &kp SLASH                    &mm_qwe
                                                       &td_esc_scrl_slow  &td_clk           &td_space_nav    &kp ENTER  &bs_num 1 BACKSPACE
             >;
         };
@@ -846,10 +837,10 @@
         SYM {
             display-name = "Sym";
             bindings = <
-&none  &kp TILDE  &kp DLLR  &kp CARET  &move_line_up    &mc_add_above    &kp PLUS      &kp AMPERSAND  &kp LBKT  &kp RBKT  &kp PRCNT  &kp BSLH
-&none  &kp UNDER  &kp LT    &kp GT     &kp BACKSPACE    &delete_line     &kp KP_MINUS  &kp GRAVE      &kp LPAR  &kp RPAR  &kp ASTRK  &kp PIPE
-&none  &home_dir  &none     &kp HASH   &move_line_down  &mc_add_below    &kp EQUAL     &code_blk      &kp LBRC  &kp RBRC  &kp AT     &kp FSLH
-                            &none      &trans           &trans           &trans        &kp DELETE
+&none  &kp TILDE  &kp DLLR         &kp CARET  &move_line_up    &mc_add_above    &kp PLUS      &kp AMPERSAND  &kp LBKT  &kp RBKT  &kp PRCNT  &kp BSLH
+&none  &kp UNDER  &kp LT           &kp GT     &kp BACKSPACE    &delete_line     &kp KP_MINUS  &kp GRAVE      &kp LPAR  &kp RPAR  &kp ASTRK  &kp PIPE
+&none  &home_dir  &kp EXCLAMATION  &kp HASH   &move_line_down  &mc_add_below    &kp EQUAL     &code_blk      &kp LBRC  &kp RBRC  &kp AT     &kp FSLH
+                                   &none      &trans           &trans           &trans        &kp DELETE
             >;
         };
 
