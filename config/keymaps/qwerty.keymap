@@ -50,7 +50,7 @@
             #binding-cells = <0>;
             bindings = <&kp N1>, <&kp F1>;
 
-            mods = <MOD_LSFT>;
+            mods = <(MOD_LCTL)>;
         };
 
         mm_f2: num_or_f2 {
@@ -58,7 +58,7 @@
             #binding-cells = <0>;
             bindings = <&kp N2>, <&kp F2>;
 
-            mods = <MOD_LSFT>;
+            mods = <(MOD_LCTL)>;
         };
 
         mm_f3: num_or_f3 {
@@ -66,7 +66,7 @@
             #binding-cells = <0>;
             bindings = <&kp N3>, <&kp F3>;
 
-            mods = <MOD_LSFT>;
+            mods = <(MOD_LCTL)>;
         };
 
         mm_f4: num_or_f4 {
@@ -74,7 +74,7 @@
             #binding-cells = <0>;
             bindings = <&kp N4>, <&kp F4>;
 
-            mods = <MOD_LSFT>;
+            mods = <(MOD_LCTL)>;
         };
 
         mm_f5: num_or_f5 {
@@ -82,7 +82,7 @@
             #binding-cells = <0>;
             bindings = <&kp N5>, <&kp F5>;
 
-            mods = <MOD_LSFT>;
+            mods = <(MOD_LCTL)>;
         };
 
         mm_f6: num_or_f6 {
@@ -90,7 +90,7 @@
             #binding-cells = <0>;
             bindings = <&kp N6>, <&kp F6>;
 
-            mods = <MOD_LSFT>;
+            mods = <(MOD_LCTL)>;
         };
 
         mm_f7: num_or_f7 {
@@ -98,7 +98,7 @@
             #binding-cells = <0>;
             bindings = <&kp N7>, <&kp F7>;
 
-            mods = <MOD_LSFT>;
+            mods = <(MOD_LCTL)>;
         };
 
         mm_f8: num_or_f8 {
@@ -106,7 +106,7 @@
             #binding-cells = <0>;
             bindings = <&kp N8>, <&kp F8>;
 
-            mods = <MOD_LSFT>;
+            mods = <(MOD_LCTL)>;
         };
 
         mm_f9: num_or_f9 {
@@ -114,7 +114,7 @@
             #binding-cells = <0>;
             bindings = <&kp N9>, <&kp F9>;
 
-            mods = <MOD_LSFT>;
+            mods = <(MOD_LCTL)>;
         };
 
         mm_f10: pct_or_f10 {
@@ -122,7 +122,7 @@
             #binding-cells = <0>;
             bindings = <&kp PRCNT>, <&kp F10>;
 
-            mods = <MOD_LSFT>;
+            mods = <(MOD_LCTL)>;
         };
 
         mm_f11: asterisk_or_f11 {
@@ -130,7 +130,7 @@
             #binding-cells = <0>;
             bindings = <&kp ASTRK>, <&kp F11>;
 
-            mods = <MOD_LSFT>;
+            mods = <(MOD_LCTL)>;
         };
 
         mm_f12: dot_or_f12 {
@@ -138,7 +138,7 @@
             #binding-cells = <0>;
             bindings = <&kp DOT>, <&kp F12>;
 
-            mods = <MOD_LSFT>;
+            mods = <(MOD_LCTL)>;
         };
 
         // Left-hand HRM
@@ -681,20 +681,20 @@
         BASE {
             display-name = "Base";
             bindings = <
-&kp TAB    &kp Q                &kp W                &kp E              &kp R                    &kp T          &kp Y      &kp U                      &kp I               &kp O                  &kp P                          &td_layers
-&kp LCTRL  &ht_left LEFT_WIN A  &ht_left LEFT_ALT S  &ht_left LSHIFT D  &ht_left LEFT_CONTROL F  &kp G          &kp H      &ht_right RIGHT_CONTROL J  &ht_right RSHIFT K  &ht_right RIGHT_ALT L  &ht_right RIGHT_WIN SEMICOLON  &kp SQT
-&none      &kp Z                &kp X                &kp C              &kp V                    &kp B          &kp N      &lt 7 M                    &kp COMMA           &kp PERIOD             &kp SLASH                      &sl 3
-                                                     &kp LEFT_WIN       &lt 1 ESCAPE             &lt 2 SPACE    &kp ENTER  &lt 4 BACKSPACE
+&kp TAB    &kp Q                &kp W                &kp E              &kp R                    &kp T          &kp Y      &kp U                      &kp I               &kp O             &kp P                          &td_layers
+&kp LCTRL  &ht_left LEFT_WIN A  &ht_left LEFT_ALT S  &ht_left LSHIFT D  &ht_left LEFT_CONTROL F  &kp G          &kp H      &ht_right RIGHT_CONTROL J  &ht_right RSHIFT K  &ht_right LALT L  &ht_right RIGHT_WIN SEMICOLON  &kp SQT
+&none      &kp Z                &kp X                &kp C              &kp V                    &kp B          &kp N      &lt 7 M                    &kp COMMA           &kp PERIOD        &kp SLASH                      &sl 3
+                                                     &kp LEFT_WIN       &lt 2 ESCAPE             &lt 1 SPACE    &kp ENTER  &lt 4 BACKSPACE
             >;
         };
 
         NUM {
             display-name = "Num";
             bindings = <
-&kp TAB    &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5         &kp NUMBER_6    &kp N7         &kp N8        &kp N9                &kp N0                 &trans
-&kp LCTRL  &kp F1           &kp F2        &kp F8        &kp F4        &kp F5         &none           &none          &none         &none                 &none                  &none
-&none      &kp EXCLAMATION  &kp AT_SIGN   &kp HASH      &kp DOLLAR    &kp PERCENT    &kp CARET       &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none
-                                          &trans        &trans        &trans         &kp LEFT_SHIFT  &kp DELETE
+&kp TAB    &mm_f1           &mm_f2       &mm_f3    &mm_f4      &mm_f5         &mm_f6          &mm_f7         &mm_f8        &mm_f9                &kp N0                 &trans
+&kp LCTRL  &kp F1           &kp F2       &kp F8    &kp F4      &kp F5         &none           &none          &none         &none                 &none                  &none
+&none      &kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET       &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none
+                                         &trans    &trans      &trans         &kp LEFT_SHIFT  &kp LCTRL
             >;
         };
 
@@ -704,7 +704,7 @@
 &kp LG(TAB)  &msc MOVE_LEFT  &msc MOVE_UP    &none         &msc MOVE_DOWN   &msc MOVE_RIGHT    &create_or_attach  &next_pane      &show_sessions  &sync_panes      &detach_session  &kp INSERT
 &kp TAB      &kp LCMD        &kp LALT        &kp LSHFT     &kp LCTRL        &mkp MB5           &kp LEFT_ARROW     &kp DOWN_ARROW  &kp UP_ARROW    &kp RIGHT_ARROW  &h_split         &none
 &none        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none              &kp HOME           &kp PAGE_DOWN   &kp PG_UP       &kp END          &v_split         &none
-                                             &none         &none            &trans             &none              &trans
+                                             &none         &none            &trans             &none              &kp DELETE
             >;
         };
 
@@ -721,7 +721,7 @@
         SYM {
             display-name = "sybol";
             bindings = <
-&none  &kp TAB    &none  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp TILDE    &kp GRAVE       &kp SQT        &kp DOUBLE_QUOTES  &none                 &none  &kp BACKSPACE
+&none  &kp TAB    &none  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp TILDE    &kp GRAVE       &kp SQT        &kp DOUBLE_QUOTES  &kp PIPE              &none  &kp BACKSPACE
 &to 5  &kp LCTRL  &none  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE     &kp MINUS       &kp PLUS       &kp EQUAL          &kp NON_US_BACKSLASH  &none  &none
 &none  &kp LSHFT  &none  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp AMPS     &kp UNDERSCORE  &kp LESS_THAN  &kp GREATER_THAN   &kp SLASH             &none  &none
                          &trans                &trans                 &trans       &trans          &trans
