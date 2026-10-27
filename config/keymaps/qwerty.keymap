@@ -681,10 +681,10 @@
         BASE {
             display-name = "Base";
             bindings = <
-&kp TAB    &kp Q                &kp W                &kp E              &kp R                    &kp T          &kp Y      &kp U                      &kp I               &kp O             &kp P                          &td_layers
-&kp LCTRL  &ht_left LEFT_WIN A  &ht_left LEFT_ALT S  &ht_left LSHIFT D  &ht_left LEFT_CONTROL F  &kp G          &kp H      &ht_right RIGHT_CONTROL J  &ht_right RSHIFT K  &ht_right LALT L  &ht_right RIGHT_WIN SEMICOLON  &kp SQT
-&none      &kp Z                &kp X                &kp C              &kp V                    &kp B          &kp N      &lt 7 M                    &kp COMMA           &kp PERIOD        &kp SLASH                      &sl 3
-                                                     &kp LEFT_WIN       &lt 2 ESCAPE             &lt 1 SPACE    &kp ENTER  &lt 4 BACKSPACE
+&kp TAB             &kp Q                &kp W                &kp E              &kp R                    &kp T          &kp Y      &kp U                      &kp I               &kp O             &kp P                          &td_layers
+&kp LCTRL           &ht_left LEFT_WIN A  &ht_left LEFT_ALT S  &ht_left LSHIFT D  &ht_left LEFT_CONTROL F  &kp G          &kp H      &ht_right RIGHT_CONTROL J  &ht_right RSHIFT K  &ht_right LALT L  &ht_right RIGHT_WIN SEMICOLON  &kp SQT
+&kp LA(LEFT_SHIFT)  &kp Z                &kp X                &kp C              &kp V                    &kp B          &kp N      &lt 7 M                    &kp COMMA           &kp PERIOD        &kp SLASH                      &sl 3
+                                                              &kp LEFT_WIN       &lt 2 ESCAPE             &lt 1 SPACE    &kp ENTER  &lt 4 BACKSPACE
             >;
         };
 
@@ -703,7 +703,7 @@
             bindings = <
 &kp LG(TAB)  &msc MOVE_LEFT  &msc MOVE_UP    &none         &msc MOVE_DOWN   &msc MOVE_RIGHT    &create_or_attach  &next_pane      &show_sessions  &sync_panes      &detach_session  &kp INSERT
 &kp TAB      &kp LCMD        &kp LALT        &kp LSHFT     &kp LCTRL        &mkp MB5           &kp LEFT_ARROW     &kp DOWN_ARROW  &kp UP_ARROW    &kp RIGHT_ARROW  &h_split         &none
-&none        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none              &kp HOME           &kp PAGE_DOWN   &kp PG_UP       &kp END          &v_split         &none
+&none        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &kp RC(B)          &kp HOME           &kp PAGE_DOWN   &kp PG_UP       &kp END          &v_split         &none
                                              &none         &none            &trans             &none              &kp DELETE
             >;
         };
